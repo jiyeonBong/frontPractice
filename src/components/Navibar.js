@@ -19,7 +19,7 @@ function Navibar(){
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
-            <Nav.Link href="#login">로그인</Nav.Link>
+            <Nav.Link href="/Login.js">로그인</Nav.Link>
             <Nav.Link href="#signup">회원가입</Nav.Link>
           </Navbar.Text>
         </Navbar.Collapse>
