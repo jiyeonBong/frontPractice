@@ -1,3 +1,5 @@
+/*eslint-disable*/
+
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import './App.css';
@@ -29,10 +31,10 @@ function App() {
 
   return (
     <>
-    {/* <Navibar/> */}
+    <Navibar/>
     <div>
-    <Login/>
-    <SignUp/>
+    {/* <Login/> */}
+    {/* <SignUp/> */}
     </div>
     
  

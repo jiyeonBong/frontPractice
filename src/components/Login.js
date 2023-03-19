@@ -1,7 +1,8 @@
+/*eslint-disable*/
 import React, { useState } from 'react';
 import { TextField, Button, Typography, Box } from '@mui/material';
 
-const LoginForm = () => {
+const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -50,15 +51,16 @@ const LoginForm = () => {
           variant="outlined"
           value={username}
           onChange={handleUsernameChange}
-          sx={{ mb: 2 }}
+          sx={{ mb: 2 , backgroundColor: '#A1BD97' }}
         />
         <TextField
+
           label="Password"
           variant="outlined"
           type="password"
           value={password}
           onChange={handlePasswordChange}
-          sx={{ mb: 2 }}
+          sx={{ mb: 2 , backgroundColor: '#A1BD97' }}
         />
         <Button variant="contained" color="success" type="submit" sx={{ mb: 2 }}>
           로그인
@@ -68,4 +70,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default Login;
