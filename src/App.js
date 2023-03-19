@@ -3,37 +3,39 @@ import axios from 'axios';
 import './App.css';
 import Navibar from "./components/Navibar.js";
 import Login from "./components/Login.js";
+import SignUp from "./components/SignUp.js";
 
 function App() {
-  const [xrpInfo, setXrpInfo] = useState([]);
+  // const [xrpInfo, setXrpInfo] = useState([]);
 
-    useEffect(() => {
+  //   useEffect(() => {
 
-        //Upbit API
-        const getApi = async() =>{
-            await axios.get('https://api.upbit.com/v1/candles/minutes/1?market=KRW-BTC&count=4').then((res) =>{
-            for(let i = 0; i < res.data.length; i++){
-                if(res.data[i].market != null){
-                        setXrpInfo(prev => {return [...prev, res.data[i]]})
-                }else{
-                    alert("error");
-                }
-            }
-            })
+  //       //Upbit API
+  //       const getApi = async() =>{
+  //           await axios.get('https://api.upbit.com/v1/candles/minutes/1?market=KRW-BTC&count=4').then((res) =>{
+  //           for(let i = 0; i < res.data.length; i++){
+  //               if(res.data[i].market != null){
+  //                       setXrpInfo(prev => {return [...prev, res.data[i]]})
+  //               }else{
+  //                   alert("error");
+  //               }
+  //           }
+  //           })
             
-        }
-        getApi();
-    }, [])
+  //       }
+  //       getApi();
+  //   }, [])
 
 
   return (
     <>
-    <Navibar/>
+    {/* <Navibar/> */}
+    <div>
     <Login/>
-
+    <SignUp/>
+    </div>
     
-
-    
+ 
 
     {/* <div className="Main">
     메인페이지

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { TextField, Button, Typography, Box } from '@mui/material';
 
-const LoginForm = () => {
+const SignupForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -13,9 +14,13 @@ const LoginForm = () => {
     setPassword(event.target.value);
   };
 
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(`Username: ${username}, Password: ${password}`);
+    console.log(`Username: ${username}, Password: ${password}, Name: ${name}`);
   };
 
   return (
@@ -43,7 +48,7 @@ const LoginForm = () => {
         onSubmit={handleSubmit}
       >
         <Typography variant="h5" component="h2" sx={{ mb: 2 }}>
-          Log In
+          Sign Up
         </Typography>
         <TextField
           label="Id"
@@ -60,12 +65,19 @@ const LoginForm = () => {
           onChange={handlePasswordChange}
           sx={{ mb: 2 }}
         />
+        <TextField
+          label="Name"
+          variant="outlined"
+          value={name}
+          onChange={handleNameChange}
+          sx={{ mb: 2 }}
+        />
         <Button variant="contained" color="success" type="submit" sx={{ mb: 2 }}>
-          로그인
+          회원가입
         </Button>
       </Box>
     </Box>
   );
 };
 
-export default LoginForm;
+export default SignupForm;
