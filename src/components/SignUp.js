@@ -138,9 +138,9 @@ const Signup = () => {
   };
 
   return (
-    <Paper variant="outlined" sx={{width: '90%', maxWidth: '500px', margin: '0 auto', padding: '20px' ,mt:10 }}>
-    <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", mt: 5 }}>
-    <Typography variant="h5" component="h2" sx={{ mb: 2 }}>
+    <Paper variant="outlined" sx={{width: '90%', maxWidth: '500px', margin: '0 auto', padding: '20px' ,mt:7 }}>
+    <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", mt: 3 }}>
+    <Typography variant="h5" component="h2" sx={{ mb: 1 }}>
           Sign Up
         </Typography>
       <TextField

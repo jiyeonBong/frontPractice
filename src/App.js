@@ -34,7 +34,7 @@ function App() {
     <Navibar/>
     <div>
     {/* <Login/> */}
-    {/* <SignUp/> */}
+    <SignUp/>
     </div>
     
  
