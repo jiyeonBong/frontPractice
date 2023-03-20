@@ -138,7 +138,7 @@ const Signup = () => {
   };
 
   return (
-    <Paper variant="outlined" sx={{width: '90%', maxWidth: '500px', margin: '0 auto', padding: '20px' ,mt:7 }}>
+    <Paper variant="outlined" sx={{width: '90%', maxWidth: '500px', margin: '0 auto', padding: '20px' ,mt:6 }}>
     <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", mt: 3 }}>
     <Typography variant="h5" component="h2" sx={{ mb: 1 }}>
           Sign Up
@@ -210,7 +210,7 @@ const Signup = () => {
       />
       <br/>
       <Button variant="contained" color="success" onClick={handleSubmit} sx={{ mb: 2 }}>
-        Sign up
+        회원가입
       </Button>
     </Box>
     </Paper>

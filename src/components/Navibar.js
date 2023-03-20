@@ -1,7 +1,9 @@
 /*eslint-disable*/
 import React from 'react';
 import { AppBar, Toolbar, Typography, Button,Box } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
+import Login from "./Login.js";
+import SignUp from "./SignUp.js";
 
 const Navibar = () => {
   return (
@@ -17,7 +19,7 @@ const Navibar = () => {
           <Button color="inherit" component={Link} to="/menu3" >모의투자</Button>
           <Button color="inherit" component={Link} to="/menu4" >실전자동매매</Button>
           <Button color="inherit" component={Link} to="/menu5" >코인동향</Button>
-          <Button color="inherit" component={Link} to="/menu5" >공지사항</Button>
+          <Button color="inherit" component={Link} to="/menu6" >공지사항</Button>
         </div>
       </Typography>
       <Typography align="right">
@@ -30,6 +32,7 @@ const Navibar = () => {
         
       </Toolbar>
     </AppBar>
+    
   );
 };
 
