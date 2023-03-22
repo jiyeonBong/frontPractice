@@ -3,9 +3,16 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import './App.css';
-import Navibar from "./components/Navibar.js";
-import Login from "./components/Login.js";
-import SignUp from "./components/SignUp.js";
+import VirtualInvesting from './components/VirtualInvesting.js';
+import AutoTrading from './components/AutoTrading.js';
+import BackTesting from './components/BackTesting.js';
+import CoinNews from './components/CoinNews.js';
+import CreateModel from './components/CreateModel.js';
+import Login from './components/Login.js';
+import SignUp from './components/SignUp.js';
+import Navibar from './components/Navibar.js';
+import Notice from './components/Notice.js';
+
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 function App() {
@@ -13,18 +20,17 @@ function App() {
     <>
     <div>
     <Navibar/>
-    메인페이지
+    메인페이지 
     </div>
     <div>
     <Routes>
-        
-{/*}
-        <Route path="/menu1" element={Link}/>
-        <Route path="/menu2" element={Link}/>
-        <Route path="/menu3" element={Link}/>
-        <Route path="/menu4" element={Link}/>
-        <Route path="/menu5" element={Link}/>
-        <Route path="/menu6" element={Link}/> */}
+
+        <Route path="/createmodel" element={<CreateModel/>}/>
+        <Route path="/backtesting" element={<BackTesting/>}/>
+        <Route path="/virtualinvest" element={<VirtualInvesting/>}/>
+        <Route path="/autotrading" element={<AutoTrading/>}/>
+        <Route path="/coinnews" element={<CoinNews/>}/>
+        <Route path="/notice" element={<Notice/>}/>
 
         <Route path="/Login" element={<Login/>}/>
         <Route path="/signup" element={<SignUp/>}/>
