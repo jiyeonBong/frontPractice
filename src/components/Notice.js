@@ -1,54 +1,10 @@
 /*eslint-disable*/
-// import React from 'react';
-// import { Button, Paper, Box , TextField, FormControl} from '@mui/material';
-// import SearchIcon from '@mui/icons-material/Search';
-// import styled from '@mui/material/styles';
-
-
-
-// const Notice = () =>{
-//     return(
-//      <>
-//         <Paper variant="outlined" sx={{width: '90%', maxWidth: '1000px', margin: '0 auto', padding: '10px' ,mt:7 }}>
-        
-//         <div style={{ margin: 20, padding: 20 }}>
-//         <Box component="form" sx={{
-//           "& .MuiTextField-root": { m: 1, width: "40ch" },
-//         }} noValidate autoComplete="off">
-//         공지사항
-//         {""}
-//         <TextField id="standard-search" label="search" type="search" variant="standard" sx={{ p: "5px" }}/>
-//         <Button variant="contained" color="success" sx={{ p: "10px" }}>검색</Button>
-//         </Box>
-//         </div>
-//         <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", mt: 3 }}>
-            
-
-
-//             {/* <TextField
-//                 id =""/> */}
-//             <table>
-//                 <thread>
-//                     <tr>
-//                         <th>no.</th>
-//                         <th>제목</th>
-//                         <th>등록일</th>
-//                         <th>조회수</th>
-//                     </tr>
-//                 </thread>
-//             </table>
-//         </Box>
-//         </Paper>  
-//      </>
-//     )
-// }
-
-// export default Notice;
 import { useState } from 'react';
 import '../css/Notice.css';
 import { TextField, Paper, Typography, Grid,Button,TableCell, TableContainer, Table, TableRow, IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
+//여기는 크롤링해서 json파일 불러올 예정
 const categories = ['전체', '거래소1', '거래소2', '거래소3', '거래소4'];
 
 const notices = [
@@ -87,6 +43,8 @@ const Notices = () => {
     // 검색어를 입력 후 검색 버튼을 클릭할 때 실행되는 함수
     console.log('검색어:', searchValue);
   };
+
+  
 
   return (
     <Grid container spacing={2} sx={{paddingTop:10, display: 'flex', justifyContent: 'center'}} >

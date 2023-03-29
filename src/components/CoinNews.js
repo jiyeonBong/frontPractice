@@ -1,4 +1,10 @@
-// /*eslint-disable*/
-// import React from 'react';
+/*eslint-disable*/
+import React from 'react';
 
-// export default CoinNews;
+const CoinNews = () => {
+    return(
+        <div>dk</div>
+    )
+};
+
+export default CoinNews;

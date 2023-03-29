@@ -12,6 +12,7 @@ import Login from './components/Login.js';
 import SignUp from './components/SignUp.js';
 import Navibar from './components/Navibar.js';
 import Notice from './components/Notice.js';
+import Main from './components/Main.js';
 
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
@@ -24,7 +25,7 @@ function App() {
     </div>
     <div>
     <Routes>
-
+        <Route path="/main" element={<Main/>}/>
         <Route path="/createmodel" element={<CreateModel/>}/>
         <Route path="/backtesting" element={<BackTesting/>}/>
         <Route path="/virtualinvest" element={<VirtualInvesting/>}/>

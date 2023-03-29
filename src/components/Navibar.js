@@ -10,7 +10,7 @@ const Navibar = () => {
     <AppBar sx={{ backgroundColor: '#2E581F' }} position="sticky">
       <Toolbar>
       <Typography sx={{ flexGrow: 1}}>
-          <Button color="inherit" component={Link} to="/">C.M.T</Button>
+          <Button color="inherit" component={Link} to="/main">C.M.T</Button>
       </Typography>
       <Typography sx={{ flexGrow: 0.8}}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
