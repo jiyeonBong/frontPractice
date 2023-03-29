@@ -1,9 +1,13 @@
 /*eslint-disable*/
 import React from 'react';
+import { TextField, Paper, Typography, Grid,Button,TableCell, TableContainer, Table, TableRow, IconButton } from '@mui/material';
 
 const CoinNews = () => {
     return(
-        <div>dk</div>
+        <>
+        코인동향페이지
+        </>
+
     )
 };
 
