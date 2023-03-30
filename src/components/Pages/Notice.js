@@ -1,6 +1,6 @@
 /*eslint-disable*/
 import { useState } from 'react';
-import '../css/Notice.css';
+import '../../css/Notice.css';
 import { TextField, Paper, Typography, Grid,Button,TableCell, TableContainer, Table, TableRow, IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
@@ -84,65 +84,27 @@ const Notices = () => {
             </Grid> 
           </Grid>
 
-          {/* <Grid container spacing={2}>
-            <Grid item xs={12} sm={15}> */}
-                {/* <Grid container justifyContent="space-between" alignItems="center" sx={{ marginBottom: 4}}> */}
-                    {/* <Grid item sx={{ fontWeight: 'bold' }}>
-                    No.
-                    </Grid>
-                    <Grid item xs={6} sm={7} sx={{ fontWeight: 'bold' }}>
-                    제목
-                    </Grid>
-                    <Grid item xs={3} sm={2} sx={{ fontWeight: 'bold' }}>
-                    등록일
-                    </Grid>
-                    <Grid item xs={3} sm={1} sx={{ fontWeight: 'bold' }}>
-                    조회수
-                    </Grid> */}
-                     <TableContainer component={Paper}>
-                    <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                    <TableRow>
-                    <TableCell sx={{ fontWeight: 'bold', borderBottomWidth: 2 }}>No.</TableCell>
-                    <TableCell sx={{ fontWeight: 'bold', borderBottomWidth: 2 }}>제목</TableCell>
-                    <TableCell sx={{ fontWeight: 'bold', borderBottomWidth: 2 }}>등록일</TableCell>
-                    <TableCell sx={{ fontWeight: 'bold', borderBottomWidth: 2 }}>조회수</TableCell>
-                    </TableRow>
+            <TableContainer component={Paper}>
+            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <TableRow>
+            <TableCell sx={{ fontWeight: 'bold', borderBottomWidth: 2 }}>No.</TableCell>
+            <TableCell sx={{ fontWeight: 'bold', borderBottomWidth: 2 }}>제목</TableCell>
+            <TableCell sx={{ fontWeight: 'bold', borderBottomWidth: 2 }}>등록일</TableCell>
+            <TableCell sx={{ fontWeight: 'bold', borderBottomWidth: 2 }}>조회수</TableCell>
+            </TableRow>
 
-                {/* </Grid> */}
-                {/* {filteredNotices.map((notice, index) => (
-                    <Typography key={notice.id} sx={{ marginBottom: 3 }}>
-                    <Grid container justifyContent="space-between" alignItems="center">
-                        <Grid item>
-                        {index + 1}.
-                        </Grid>
-                        <Grid item xs={6} sm={7}>
-                        {notice.title}
-                        </Grid>
-                        <Grid item xs={3} sm={2}>
-                        {notice.date}
-                        </Grid>
-                        <Grid item xs={3} sm={1}>
-                        {notice.views}
-                        </Grid>
-                    </Grid>
-                    </Typography>
-                ))} */}
-
-                {filteredNotices.map((notice, index) => (
-                <TableRow key={notice.id}>
-                    <TableCell component="th" scope="row" sx={{ borderBottomWidth: 2 }}>
-                    {index + 1}
-                    </TableCell>
-                    <TableCell sx={{ borderBottomWidth: 2 }}>{notice.title}</TableCell>
-                    <TableCell sx={{ borderBottomWidth: 2 }}>{notice.date}</TableCell>
-                    <TableCell sx={{ borderBottomWidth: 2 }}>{notice.views}</TableCell>
-                </TableRow>
-                ))}
-                </Table>
-                </TableContainer>
-           
-            {/* </Grid>
-            </Grid> */}
+              {filteredNotices.map((notice, index) => (
+              <TableRow key={notice.id}>
+                  <TableCell component="th" scope="row" sx={{ borderBottomWidth: 2 }}>
+                  {index + 1}
+                  </TableCell>
+                  <TableCell sx={{ borderBottomWidth: 2 }}>{notice.title}</TableCell>
+                  <TableCell sx={{ borderBottomWidth: 2 }}>{notice.date}</TableCell>
+                  <TableCell sx={{ borderBottomWidth: 2 }}>{notice.views}</TableCell>
+              </TableRow>
+              ))}
+            </Table>
+            </TableContainer>
 
         </Paper>
       </Grid>

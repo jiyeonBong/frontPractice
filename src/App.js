@@ -3,16 +3,17 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import './App.css';
-import VirtualInvesting from './components/VirtualInvesting.js';
-import AutoTrading from './components/AutoTrading.js';
-import BackTesting from './components/BackTesting.js';
-import CoinNews from './components/CoinNews.js';
-import CreateModel from './components/CreateModel.js';
+import VirtualInvesting from './components/Pages/VirtualInvesting.js';
+import AutoTrading from './components/Pages/AutoTrading.js';
+import BackTesting from './components/Pages/BackTesting.js';
+import CoinNews from './components/Pages/CoinNews.js';
+import CreateModel from './components/Pages/CreateModel.js';
+import Notice from './components/Pages/Notice.js';
+
+import Main from './components/Main.js';
 import Login from './components/Login.js';
 import SignUp from './components/SignUp.js';
 import Navibar from './components/Navibar.js';
-import Notice from './components/Notice.js';
-import Main from './components/Main.js';
 
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
