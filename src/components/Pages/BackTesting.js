@@ -1,9 +1,21 @@
 import React from 'react';
+import { Grid, Box } from '@mui/material';
 
 const BackTesting = () => {
     return(
         <>
-        백테스팅페이지
+        <Box sx={{ flexGrow: 1 }}>
+        <Grid container spacing={1}>
+            <Grid item xs={12} sm={6}>
+                오른
+            {/* 왼쪽 영역 */}
+            </Grid>
+            <Grid item xs={12} sm={6}>
+            {/* 오른쪽 영역 */}
+            왼
+            </Grid>
+        </Grid>
+        </Box>
         </>
     )
 };
