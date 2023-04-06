@@ -33,9 +33,9 @@ const AutoTrading = () => {
         <Paper sx={{ padding:10, display: 'flex', justifyContent: 'center' }}>
         <Grid container justifyContent="space-between" alignItems="center" sx={{ marginBottom: 8 }}>
         
-        <Box display="flex" alignItems="center">
+        <Box display="flex" alignItems="center" >
             <Typography sx={{ mr: 1 }}>기간선택:</Typography>
-            <Box display="flex" alignItems="center" sx={{ flexGrow: 1 }}>
+            <Box display="flex" alignItems="center" sx={{ flexGrow: 1 , marginRight: '10px'}}>
                 <DatePicker
                 selected={startDate}
                 onChange={handleStartDateChange}
@@ -53,10 +53,14 @@ const AutoTrading = () => {
                 />{" "}
             </Box>
             
-            {/* <Box sx={{ flexGrow: 1 }} /> */}
-            <Button variant="contained" color="success" onClick={handleApplyButtonClick} sx={{ marginLeft: '790px', mr: 1 }}>매매시작</Button>
+            <Box  flexGrow={1} />
+            
+            <Box display="flex" alignItems="center" >
+            <Button variant="contained" color="success" onClick={handleApplyButtonClick} sx={{ mr: 1 }}>매매시작</Button>
             <Button variant="contained" color="success" onClick={handleClearButtonClick}>매매종료</Button>
-        </Box>    
+            </Box>
+        </Box>
+
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableRow>
