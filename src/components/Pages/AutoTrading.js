@@ -1,62 +1,62 @@
 /*eslint-disable*/
 import React, {useState} from 'react';
 import { Box,TextField, Paper, Typography, Grid,Button,TableCell, TableContainer, Table, TableRow, IconButton } from '@mui/material';
-import DatePicker from '@mui/lab/DatePicker';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 const AutoTrading = () => {
     const [startDate, setStartDate] = useState(null);
     const [endDate, setEndDate] = useState(null);
-  
+    
     const handleStartDateChange = (date) => {
-      setStartDate(date);
+        setStartDate(date);
     };
-  
+    
     const handleEndDateChange = (date) => {
-      setEndDate(date);
+        setEndDate(date);
     };
-  
+    
     const handleApplyButtonClick = () => {
-      console.log('Selected date range:', startDate, endDate);
+        console.log('Apply clicked');
+        console.log(`Start Date: ${startDate}`);
+        console.log(`End Date: ${endDate}`);
     };
-  
+    
     const handleClearButtonClick = () => {
-      setStartDate(null);
-      setEndDate(null);
+        console.log('Clear clicked');
+        setStartDate(null);
+        setEndDate(null);
     };
     return(
         <>
-        <Grid item xs={12} sm={7.5}>
+        {/* <Grid item xs={12} sm={7.5}> */}
         <Paper sx={{ padding:10, display: 'flex', justifyContent: 'center' }}>
         <Grid container justifyContent="space-between" alignItems="center" sx={{ marginBottom: 8 }}>
-            <Box display="flex" alignItems="center">
-            <DatePicker
-                label="Start Date"
-                value={startDate}
+        
+        <Box display="flex" alignItems="center">
+            <Typography sx={{ mr: 1 }}>기간선택:</Typography>
+            <Box display="flex" alignItems="center" sx={{ flexGrow: 1 }}>
+                <DatePicker
+                selected={startDate}
                 onChange={handleStartDateChange}
-                renderInput={(params) => <TextField {...params} />}
+                dateFormat="yyyy/MM/dd"
+                customInput={<TextField />}
                 sx={{ mr: 1 }}
-            />
-            <DatePicker
-                label="End Date"
-                value={endDate}
+                />
+                <Typography sx={{ mx: 1 }}>~</Typography>
+                <DatePicker
+                selected={endDate}
                 onChange={handleEndDateChange}
-                renderInput={(params) => <TextField {...params} />}
+                dateFormat="yyyy/MM/dd"
+                customInput={<TextField />}
                 sx={{ mr: 1 }}
-            />
-            <Box flexGrow={1} />
-            <Button onClick={handleApplyButtonClick}>Apply</Button>
-            <Button onClick={handleClearButtonClick}>Clear</Button>
+                />{" "}
             </Box>
-        {/* <Grid item>
-            기간선택: 
-            <DatePicker selected={startDate} onChange={date => setStartDate(date)} />
-            에서 
-            <DatePicker selected={endDate} onChange={date => setEndDate(date)} />
-            까지 
-            모델선택
-            <Button variant="contained" color="success">매매 시작</Button>{" "}
-            <Button variant="contained" color="success">매매 중지</Button>
-        </Grid> */}
+            
+            {/* <Box sx={{ flexGrow: 1 }} /> */}
+            <Button variant="contained" color="success" onClick={handleApplyButtonClick} sx={{ marginLeft: '790px', mr: 1 }}>매매시작</Button>
+            <Button variant="contained" color="success" onClick={handleClearButtonClick}>매매종료</Button>
+        </Box>    
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableRow>
@@ -71,7 +71,7 @@ const AutoTrading = () => {
         </TableContainer>
         </Grid>
         </Paper>
-        </Grid>
+        {/* </Grid> */}
         </>
     )
 };
