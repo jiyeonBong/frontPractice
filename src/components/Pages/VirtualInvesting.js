@@ -4,7 +4,7 @@ import React from 'react';
 const VirtualInvesting = () =>{
     return(
         <>
-        모의투자
+        자동매매와 동일
         </>
     )
 };

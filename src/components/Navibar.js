@@ -14,7 +14,7 @@ const Navibar = () => {
       </Typography>
       <Typography sx={{ flexGrow: 0.8}}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <Button color="inherit" component={Link} to="/createmodel" >모델생성</Button>
+          {/* <Button color="inherit" component={Link} to="/createmodel" >모델생성</Button> */}
           <Button color="inherit" component={Link} to="/backtesting" >백테스팅</Button>
           <Button color="inherit" component={Link} to="/virtualinvest" >모의투자</Button>
           <Button color="inherit" component={Link} to="/autotrading" >실전자동매매</Button>
