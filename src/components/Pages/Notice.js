@@ -4,14 +4,13 @@ import '../../css/Notice.css';
 import { TextField, Paper, Typography, Grid,Button,TableCell, TableContainer, Table, TableRow, IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
-//여기는 크롤링해서 json파일 불러올 예정
+//예시(거래소,공지사항)
 const categories = ['전체', '거래소1', '거래소2', '거래소3', '거래소4'];
-
 const notices = [
-    { id: 1, category: '거래소1', title: '어쩌구저쩌구', date: '2022-12-01', views: 10 },
-    { id: 2, category: '거래소3', title: '자유로운우리를봐자유로워', date: '2022-11-25', views: 5 },
-    { id: 3, category: '거래소4', title: '졸작하기싫누', date: '2022-11-20', views: 8 },
-    { id: 4, category: '거래소2', title: '울랄라울랄라', date: '2022-11-15', views: 15 },
+    { id: 1, category: '거래소1', title: '제목1', date: '2022-12-01' },
+    { id: 2, category: '거래소3', title: '제목2', date: '2022-11-25' },
+    { id: 3, category: '거래소4', title: '제목3', date: '2022-11-20' },
+    { id: 4, category: '거래소2', title: '제목4', date: '2022-11-15' },
 ];
 
 const Notices = () => {
@@ -23,7 +22,7 @@ const Notices = () => {
   };
 
   const handleSearchClick = () => {
-    // 여기에서 검색 기능을 구현하세요
+    // 검색기능
     console.log(`"${searchValue}" 검색`);
   }
 
@@ -86,12 +85,12 @@ const Notices = () => {
 
             <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
-            <TableRow>
-            <TableCell sx={{ fontWeight: 'bold', borderBottomWidth: 2 }}>No.</TableCell>
-            <TableCell sx={{ fontWeight: 'bold', borderBottomWidth: 2 }}>제목</TableCell>
-            <TableCell sx={{ fontWeight: 'bold', borderBottomWidth: 2 }}>등록일</TableCell>
-            <TableCell sx={{ fontWeight: 'bold', borderBottomWidth: 2 }}>조회수</TableCell>
-            </TableRow>
+              <TableRow>
+                <TableCell sx={{ fontWeight: 'bold', borderBottomWidth: 2 }}>No.</TableCell>
+                <TableCell sx={{ fontWeight: 'bold', borderBottomWidth: 2 }}>제목</TableCell>
+                <TableCell sx={{ fontWeight: 'bold', borderBottomWidth: 2 }}>등록일</TableCell>
+                <TableCell sx={{ fontWeight: 'bold', borderBottomWidth: 2 }}>조회수</TableCell>
+              </TableRow>
 
               {filteredNotices.map((notice, index) => (
               <TableRow key={notice.id}>
