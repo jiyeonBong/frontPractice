@@ -14,6 +14,7 @@ import Main from './components/Main.js';
 import Login from './components/Login.js';
 import SignUp from './components/SignUp.js';
 import Navibar from './components/Navibar.js';
+import ChartComponent from './components/Pages/ChartComponent.js';
 
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
@@ -22,6 +23,7 @@ function App() {
     <>
     <div>
     <Navibar/>
+
     
 
 
@@ -38,6 +40,7 @@ function App() {
 
         <Route path="/Login" element={<Login/>}/>
         <Route path="/signup" element={<SignUp/>}/>
+        <Route path="/chart" element={<ChartComponent/>}/>
     </Routes>
     </div>
 
